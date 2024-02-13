@@ -1,0 +1,72 @@
+.overlay {
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5;
+    position: absolute;
+    font-family: 'Roboto';
+    font-style: normal;
+    letter-spacing: 0.035em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlayBox {
+    position: relative;
+    min-width: 35%;
+    min-height: 32%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+.overlayBox h4 {
+    font-size: 1.3em;
+    margin-bottom: .75rem;
+}
+
+.groupName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+}
+
+.groupName label {
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.groupName input {
+    width: 65%;
+    font-size: 1rem;
+    padding: .75rem 1rem;
+    color: #979797;
+    border: 2px solid #CCCCCC;
+    border-radius: 22px;
+    margin-left: 1vw;
+}
+
+/* Submit button */
+
+.createNoteBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.createNoteBtn button {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1em;
+    padding: .5rem 1.75rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    border-radius: 11px;
+    margin-top: .5rem;
+}

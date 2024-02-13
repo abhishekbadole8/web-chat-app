@@ -1,0 +1,23 @@
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 75vw;
+    background-color: #E8E8E8;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem 1rem;
+}
+
+.navbar h4 {
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: #0047FF;
+    font-size: 1.25rem;
+    padding: .75rem;
+    letter-spacing: 0.05em;
+}
+
+.navbar p {
+    font-size: 1.2rem;
+}

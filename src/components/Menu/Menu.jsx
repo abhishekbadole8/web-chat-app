@@ -1,14 +1,14 @@
 import React from "react";
-import Styles from "./SideMenu.module.css"
+import Styles from "./Menu.module.css"
 
-function Sidebar() {
+function Menu({ setIsModal }) {
 
     return (
         <div className={Styles.sidebarContainer}>
 
             <h3 className={Styles.title}>Web Chat</h3>
 
-            <button className={Styles.startBtn}>Start Chat</button>
+            <button className={Styles.startBtn} onClick={() => setIsModal(true)}>Start Chat</button>
 
             <div className={Styles.notesProfileContainer} >
 
@@ -16,10 +16,10 @@ function Sidebar() {
                     <h5 style={{ backgroundColor: "blue" }} className={Styles.profileInitial}>Ab</h5>
                     <p className={Styles.profileRole}>Friends</p>
                 </div>
-              
+
 
             </div>
         </div >
     )
 }
-export default Sidebar;
+export default Menu;

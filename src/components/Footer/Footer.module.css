@@ -1,0 +1,39 @@
+
+/* Input Box */
+
+.inputBoxContainer {
+    width: 100%;
+    height: 26.5vh;
+    background-color: #E8E8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 15px;
+}
+
+.inputBoxContainer textarea {
+    width: 92%;
+    height: 80%;
+    border-radius: 9px;
+    padding: 1.2vh 1.3vw;
+    border: 1px solid #CCCCCC;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    line-height: 160.19%;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.inputBoxContainer img {
+    position: absolute;
+    margin: 10vh 0 0 62.5vw;
+}
+
+#submitBtn {
+    width: 35px;
+    height: 29px;
+}
+
+#submitBtn:hover {
+    filter: brightness(0);
+}

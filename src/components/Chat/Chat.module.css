@@ -1,0 +1,47 @@
+
+.recentMsg {
+    background-color: #183D3D;
+    letter-spacing: .5px;
+    padding: 1.75rem .75rem .75rem;
+    border-bottom-right-radius: 12.5px;
+    border-bottom-left-radius: 12.5px;
+    position: relative;
+    margin-bottom: .5rem;
+    /* border-top-left-radius: 12.5px; */
+    border-top-right-radius: 12.5px;
+}
+
+.msgDT {
+    position: absolute;
+    top: .4rem;
+    font-size: .7rem;
+    color: #ABABAB;
+}
+.userName{
+    font-size: .8rem;
+    color: green;
+}
+.msgTContainer p {
+    font-size: .9rem;
+    color: azure;
+}
+
+.shapeLeft {
+    left: -0.9rem;
+    top: 0.4rem;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #183D3D;
+    transform: rotate(-90deg);
+}
+
+.shapeRight {
+    top: 0.4rem;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #183D3D;
+    right: -0.9rem;
+    transform: rotate(90deg);
+}

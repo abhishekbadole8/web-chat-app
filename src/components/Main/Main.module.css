@@ -3,29 +3,6 @@
     flex-direction: column;
 }
 
-.navbar {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    width: 75vw;
-    background-color: #E8E8E8;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: .75rem 1rem;
-}
-
-.navbar h4 {
-    border-radius: 50%;
-    color: #FFFFFF;
-    background-color: #0047FF;
-    font-size: 1.25rem;
-    padding: .75rem;
-    letter-spacing: 0.05em;
-}
-
-.navbar p {
-    font-size: 1.2rem;
-}
 
 .recentMsgContainer {
     font-family: 'DM Sans', sans-serif;
@@ -36,52 +13,6 @@
     list-style: none;
 }
 
-.recentMsg {
-    background-color: #183D3D;
-    letter-spacing: .5px;
-    padding: 1.75rem .75rem .75rem;
-    border-bottom-right-radius: 12.5px;
-    border-bottom-left-radius: 12.5px;
-    position: relative;
-    margin-bottom: .5rem;
-    /* border-top-left-radius: 12.5px; */
-    border-top-right-radius: 12.5px;
-}
-
-.msgDT {
-    position: absolute;
-    top: .4rem;
-    font-size: .7rem;
-    color: #ABABAB;
-}
-.userName{
-    font-size: .8rem;
-    color: green;
-}
-.msgTContainer p {
-    font-size: .9rem;
-    color: azure;
-}
-
-.shapeLeft {
-    left: -0.9rem;
-    top: 0.4rem;
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid #183D3D;
-    transform: rotate(-90deg);
-}
-
-.shapeRight {
-    top: 0.4rem;
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid #183D3D;
-    right: -0.9rem;
-    transform: rotate(90deg);
-}
 
 /* Scroll CSS */
 
@@ -99,44 +30,6 @@
     background-color: rgb(197, 197, 197);
 }
 
-/* Input Box */
-
-.inputBoxContainer {
-    width: 100%;
-    height: 26.5vh;
-    background-color: #E8E8E8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px 0px 0px 15px;
-}
-
-.inputBoxContainer textarea {
-    width: 92%;
-    height: 80%;
-    border-radius: 9px;
-    padding: 1.2vh 1.3vw;
-    border: 1px solid #CCCCCC;
-    resize: none;
-    font-family: 'Roboto', sans-serif;
-    line-height: 160.19%;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.inputBoxContainer img {
-    position: absolute;
-    margin: 10vh 0 0 62.5vw;
-}
-
-#submitBtn {
-    width: 35px;
-    height: 29px;
-}
-
-#submitBtn:hover {
-    filter: brightness(0);
-}
 
 @media (min-height:350px) and (max-height:650px) {
 

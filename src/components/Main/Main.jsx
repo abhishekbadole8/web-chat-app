@@ -1,5 +1,7 @@
 import Styles from "./Main.module.css"
-import image from "../../../public/arrow.png"
+import Chat from "../Chat/Chat";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 function Main() {
 
@@ -8,33 +10,17 @@ function Main() {
 
             <div className={Styles.rightContainer}>
 
-                {/* Navbar */}
-                <div className={Styles.navbar}>
-                    <h4>SN</h4>
-                    <p >Sample Note</p>
-                </div>
+                {/* Header */}
+                <Header />
 
-                {/* Mid Field */}
+                {/* Chat Body */}
                 <ul className={Styles.recentMsgContainer} >
-
-                    {/* Sample Message 2 */}
-                    <li className={Styles.recentMsg} >
-                        <p className={Styles.msgDT}> 12:47 pm | 13 Feb <span className={Styles.userName}> ~ Abhishek</span></p>
-                        <div className={Styles.msgTContainer} >
-                            <p> It's just a sample note, click Create Notes button to create your own.</p>
-                        </div>
-                        <span className={Styles.shapeRight} />
-                    </li>              
-
-
+                    <Chat />
                 </ul>
 
                 {/* Input Box */}
-                <div className={Styles.inputBoxContainer}>
-                    <textarea type="text" disabled={true}
-                        placeholder="Enter your text here....." name="message" />
-                    <img src={image} alt="submit-button" id={Styles.submitBtn} />
-                </div>
+                <Footer />
+
             </div>
 
         </div >
