@@ -1,0 +1,88 @@
+.sidebarContainer {
+    font-family: 'Roboto';
+    padding: 1.25rem 1.5rem;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.title {
+    width: 100%;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 1.75rem;
+    color: #093145;
+    text-align: left;
+    letter-spacing: 0.02em;
+}
+
+.startBtn {
+    cursor: pointer;
+    width: 100%;
+    background-color: #093145;
+    border-radius: 50px;
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    font-size: 1.3rem;
+    padding: .6rem 0;
+    margin: 1.85rem auto;
+}
+
+.notesProfileContainer {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    position: relative;
+}
+
+.notesProfile {
+    width: 107%;
+    align-items: center;
+    border-radius: 32px 0px 0px 32px;
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    padding-left: .85rem;
+    letter-spacing: 0.02em;
+    position: absolute;
+    right: -1.5rem;
+}
+
+.notesProfile:hover {
+    cursor: pointer;
+    background-color: #f8f6f2;
+}
+
+.profileInitial {
+    border-radius: 50%;
+    background-color: #0047FF;
+    color: #FFFFFF;
+    padding: .65rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.profileRole {
+    font-size: .95rem;  
+    font-weight: bold;  
+    margin-left: .8vw;
+}
+
+/* Inside scroll */
+.notesProfileContainer::-webkit-scrollbar {
+    width: .6vw;
+}
+
+.notesProfileContainer::-webkit-scrollbar-track {
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.notesProfileContainer::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: rgb(197, 197, 197);
+}
+
+/* ------------ */
