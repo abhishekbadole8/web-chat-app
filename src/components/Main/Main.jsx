@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Styles from "./Main.module.css"
 import Chat from "../Chat/Chat";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import getCustomDateAndTime from "../../utils/getCustomDateAndTime";
 
 function Main({ socket, userDetails }) {
+
     const [currentMessage, setCurrentMessage] = useState("")
     const [messages, setMessages] = useState([])
+    const chatContainerRef = useRef(null)
 
     const sendMessage = async () => {
         if (currentMessage === "") {
@@ -16,9 +19,7 @@ function Main({ socket, userDetails }) {
             roomId: userDetails.roomId,
             author: userDetails.username,
             message: currentMessage,
-            time: new Date(Date.now()).getHours() +
-                ":" +
-                new Date(Date.now()).getMinutes(),
+            time: getCustomDateAndTime(new Date())
         }
         if (messageData) {
             await socket.emit('send_message', messageData);
@@ -48,6 +49,12 @@ function Main({ socket, userDetails }) {
         setCurrentMessage(e.target.value)
     }
 
+    useEffect(() => {
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight
+        }
+    }, [messages])
+
     return (
         <div className={Styles.mainContainer}>
 
@@ -57,7 +64,7 @@ function Main({ socket, userDetails }) {
                 <Header roomId={userDetails.roomId} />
 
                 {/* Chat Body */}
-                <ul className={Styles.recentMsgContainer} >
+                <ul className={Styles.recentMsgContainer} ref={chatContainerRef}>
                     {messages.map((message, index) => (
                         <Chat content={message} key={index} username={userDetails.username} />
                     ))}

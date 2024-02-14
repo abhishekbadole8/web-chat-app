@@ -12,19 +12,18 @@
     list-style: none;
 }
 
-
 /* Scroll CSS */
 
 .recentMsgContainer::-webkit-scrollbar {
-    width: .6vw;
+    width: 5px;
 }
 
 .recentMsgContainer::-webkit-scrollbar-track {
     border-radius: 6px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: rgb(197, 197, 197);
 }
 
 .recentMsgContainer::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background-color: rgb(197, 197, 197);
+    box-shadow: inset 0 0 10px #183D3D;
 }

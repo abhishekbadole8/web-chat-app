@@ -1,16 +1,15 @@
+import { useState, useEffect } from "react"
+import io from "socket.io-client";
+import "./App.css"
 import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
-import "./App.css"
-import io from "socket.io-client";
-import { useState, useEffect } from "react"
 import JoinModal from "./components/JoinModal/JoinModal";
-
 
 function App() {
   const socket = io.connect("https://webchat-application-production.up.railway.app/")
 
-  const [isModal, setIsModal] = useState(true)
-  const [userDetails, setUserDetails] = useState({}); // State to store room id
+  const [isModal, setIsModal] = useState(false)
+  const [userDetails, setUserDetails] = useState({});
 
   useEffect(() => {
     setUserDetails(JSON.parse(localStorage.getItem('userAuth')) ? JSON.parse(localStorage.getItem('userAuth')) : { username: "Sample", roomId: "Sample" });
