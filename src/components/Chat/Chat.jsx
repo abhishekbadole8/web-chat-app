@@ -1,16 +1,20 @@
-import React from 'react'
 import Styles from "./Chat.module.css"
 
-function Chat() {
+function Chat({ content, username }) {
+
+    const { author, message } = content
+
     return (
-        <li className={Styles.recentMsg} >
-            <p className={Styles.msgDT}> 12:47 pm | 13 Feb <span className={Styles.userName}> ~ Abhishek</span></p>
+        <li className={`${Styles.recentMsg} ${author != username ? Styles.recentMsgNE : Styles.recentMsgE}`} >
+
+            <p className={Styles.msgDT}> 12:47 pm | 13 Feb <span className={Styles.userName}> ~ {author}</span></p>
 
             <div className={Styles.msgTContainer} >
-                <p> It's just a sample note, click Create Notes button to create your own.</p>
+                <p>{message}</p>
             </div>
 
-            <span className={Styles.shapeRight} />
+            {username == author ? <span className={Styles.shapeRight} /> :
+                <span className={Styles.shapeLeft} />}
         </li>)
 }
 

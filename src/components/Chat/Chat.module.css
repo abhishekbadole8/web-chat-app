@@ -1,4 +1,3 @@
-
 .recentMsg {
     background-color: #183D3D;
     letter-spacing: .5px;
@@ -7,7 +6,15 @@
     border-bottom-left-radius: 12.5px;
     position: relative;
     margin-bottom: .5rem;
-    /* border-top-left-radius: 12.5px; */
+}
+
+/* author equal to current user */
+.recentMsgE {
+    border-top-left-radius: 12.5px;
+}
+
+/* author not equal to current user */
+.recentMsgNE {
     border-top-right-radius: 12.5px;
 }
 
@@ -17,10 +24,12 @@
     font-size: .7rem;
     color: #ABABAB;
 }
-.userName{
+
+.userName {
     font-size: .8rem;
     color: green;
 }
+
 .msgTContainer p {
     font-size: .9rem;
     color: azure;

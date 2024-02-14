@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./Menu.module.css"
 
-function Menu({ setIsModal }) {
+function Menu({ setIsModal, roomId }) {
 
     return (
         <div className={Styles.sidebarContainer}>
@@ -13,10 +13,9 @@ function Menu({ setIsModal }) {
             <div className={Styles.notesProfileContainer} >
 
                 <div className={Styles.notesProfile} style={{ backgroundColor: "#F7ECDC" }}>
-                    <h5 style={{ backgroundColor: "blue" }} className={Styles.profileInitial}>Ab</h5>
-                    <p className={Styles.profileRole}>Friends</p>
+                    <h5 style={{ backgroundColor: "blue" }} className={Styles.profileInitial}>{roomId?.substring(0, 2)}</h5>
+                    <p className={Styles.profileRole}>{roomId}</p>
                 </div>
-
 
             </div>
         </div >

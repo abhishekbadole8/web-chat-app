@@ -5,22 +5,24 @@ import io from "socket.io-client";
 import { useState, useEffect } from "react"
 import JoinModal from "./components/JoinModal/JoinModal";
 
-const socket = io.connect("http://localhost:3001")
 
 function App() {
-  const [isModal, setIsModal] = useState(false)
-  const [username, setUsername] = useState("abhi")
-  const [room, setRoom] = useState("myroom")
+  const socket = io.connect("http://localhost:3001")
 
-  
+  const [isModal, setIsModal] = useState(false)
+  const [userDetails, setUserDetails] = useState({}); // State to store room id
+
+  useEffect(() => {
+    setUserDetails(JSON.parse(localStorage.getItem('userAuth')) ? JSON.parse(localStorage.getItem('userAuth')) : { username: "Sample", roomId: "Sample" });
+  }, [isModal]);
 
   return (
     <div className="App">
 
-      <Menu setIsModal={setIsModal} />
-      <Main />
+      <Menu setIsModal={setIsModal} socket={socket} roomId={userDetails.roomId} />
+      <Main socket={socket} userDetails={userDetails} />
 
-      {isModal && <JoinModal setIsModal={setIsModal} />}
+      {isModal && <JoinModal setIsModal={setIsModal} socket={socket} />}
 
     </div>
   );

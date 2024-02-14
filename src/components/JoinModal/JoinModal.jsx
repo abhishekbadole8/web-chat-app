@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Styles from "./JoinModal.module.css"
-import {useState} from "react"
+import { useState } from "react"
 
-function JoinModal({ setIsModal }) {
+function JoinModal({ setIsModal, socket }) {
+  const modalRef = useRef()
 
   const [inputValue, setInputValue] = useState({ username: "", roomId: "" })
 
@@ -13,13 +14,21 @@ function JoinModal({ setIsModal }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(inputValue);
     setIsModal(false)
+    localStorage.setItem('userAuth', JSON.stringify(inputValue))
+    socket.emit("join_room", inputValue.roomId);
+  }
+
+  const outsideClick = (e) => {
+    if (e.target == modalRef.current) {
+      setIsModal(false)
+      setInputValue({ username: "", roomId: "" })
+    }
   }
 
   return (
     <div>
-      <div id={Styles.myNav} className={Styles.overlay}  >
+      <div id={Styles.myNav} className={Styles.overlay} ref={modalRef} onClick={outsideClick}>
 
         <div className={Styles.overlayBox}>
           <h4>Create Room</h4>
