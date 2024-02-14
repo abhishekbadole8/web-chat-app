@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from "./Footer.module.css"
-import image from "../../../public/arrow.png"
+import image from "/arrow.png"
 
 function Footer({ sendMessage, handleChange, currentMessage }) {
 

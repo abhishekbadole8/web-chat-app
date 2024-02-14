@@ -8,7 +8,7 @@ function Menu({ setIsModal, roomId }) {
 
             <h3 className={Styles.title}>Web Chat</h3>
 
-            <button className={Styles.startBtn} onClick={() => setIsModal(true)}>Start Chat</button>
+            <button className={Styles.startBtn} onClick={() => setIsModal(true)}>Create Room</button>
 
             <div className={Styles.notesProfileContainer} >
 

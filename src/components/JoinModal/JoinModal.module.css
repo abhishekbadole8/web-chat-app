@@ -34,7 +34,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: .75rem;
+    margin-bottom: 1rem;
+    position: relative;
+
 }
 
 .groupName label {
@@ -51,6 +53,15 @@
     border: 2px solid #CCCCCC;
     border-radius: 22px;
     margin-left: 1vw;
+}
+
+.errorTag {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+    font-size: .65rem;
+    bottom: -.85rem;
+    left: 12.5rem;
 }
 
 /* Submit button */
