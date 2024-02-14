@@ -7,7 +7,7 @@ import JoinModal from "./components/JoinModal/JoinModal";
 
 
 function App() {
-  const socket = io.connect("http://localhost:3001")
+  const socket = io.connect("https://webchat-application-production.up.railway.app/")
 
   const [isModal, setIsModal] = useState(false)
   const [userDetails, setUserDetails] = useState({}); // State to store room id
